@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btn_send_mail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="인증메일 발송"
+        android:layout_marginRight="30dp"/>
+
+    <EditText
+        android:id="@+id/et_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/btn_send_mail"
+        android:minWidth="200dp"
+        android:inputType="text"/>
+
+
+    <Button
+        android:id="@+id/btn_send_mail_ck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="인증코드 확인"
+        android:layout_marginRight="30dp"
+        android:layout_below="@id/btn_send_mail"/>
+
+    <EditText
+        android:id="@+id/et_email_ck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/btn_send_mail"
+        android:layout_below="@id/btn_send_mail"
+        android:minWidth="200dp"
+        android:inputType="phone"/>
+
+    <TextView
+        android:id="@+id/tv_time_out"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="03:00"
+        android:textColor="@android:color/holo_red_light"
+        android:textSize="20sp"
+        android:layout_below="@id/btn_send_mail_ck"
+        android:gravity="center"
+        android:layout_marginTop="20dp"/>
+
+</RelativeLayout>
