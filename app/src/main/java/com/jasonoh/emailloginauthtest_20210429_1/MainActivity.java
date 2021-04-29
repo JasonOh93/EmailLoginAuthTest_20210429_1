@@ -41,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
         etEmailCK = findViewById(R.id.et_email_ck);
         btnSendMail = findViewById(R.id.btn_send_mail);
         btnSendMailCK.setEnabled(false);
+        etEmailCK.setEnabled(false);
         etEmail = findViewById(R.id.et_email);
         tvTimeOut = findViewById(R.id.tv_time_out);
         btnSendMail.setOnClickListener(v -> {
@@ -83,6 +84,7 @@ public class MainActivity extends AppCompatActivity {
                     tvTimeOut.setText("03:00");
 
                     randomNum = "";
+                    etEmailCK.setEnabled(false);
 
 
                     btnSendMailCK.setEnabled(false);
@@ -90,6 +92,7 @@ public class MainActivity extends AppCompatActivity {
             }.start();
 
             btnSendMailCK.setEnabled(true);
+            etEmailCK.setEnabled(true);
         });
 
         btnSendMailCK.setOnClickListener(v->{
@@ -98,7 +101,9 @@ public class MainActivity extends AppCompatActivity {
                 countDownTimer.cancel();
 //                원래 이 이후에는 추가적으로 눌러도 인증코드 확인인 안된다.
                 btnSendMailCK.setEnabled(false);
+                etEmailCK.setEnabled(false);
                 tvTimeOut.setText("03:00");
+                etEmail.setText("");
             } else{
                 new AlertDialog.Builder(this).setMessage("인증번호를 다시 확인해주세요").setNegativeButton("확인", null).create().show();
             }
