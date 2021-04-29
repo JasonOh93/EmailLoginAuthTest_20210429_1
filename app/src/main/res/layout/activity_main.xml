@@ -19,7 +19,7 @@
         android:layout_height="wrap_content"
         android:layout_toRightOf="@id/btn_send_mail"
         android:minWidth="200dp"
-        android:inputType="text"/>
+        android:inputType="textEmailAddress"/>
 
 
     <Button
